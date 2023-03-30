@@ -10,6 +10,10 @@ exports.up = function (knex) {
         table.integer('views').notNullable();
         table.integer('ratings').notNullable();
         table.integer('duration').notNullable();
+        table.string('city_img').notNullable();
+        table.string('trip_title').notNullable();
+        table.string('date').notNullable();
+        table.string('description').notNullable();
         table.timestamps(true, true);
     });
 };
