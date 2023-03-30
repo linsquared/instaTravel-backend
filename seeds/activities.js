@@ -1,13 +1,17 @@
-/**
- * @param { import("knex").Knex } knex
- * @returns { Promise<void> } 
- */
-exports.seed = async function(knex) {
+exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex('table_name').del()
-  await knex('table_name').insert([
-    {id: 1, colName: 'rowValue1'},
-    {id: 2, colName: 'rowValue2'},
-    {id: 3, colName: 'rowValue3'}
+  await knex('activites').del();
+  await knex('activites').insert([
+    {
+      user_id: '9318657024',
+      user_name: 'RoamingRaven',
+      user_icon: 'http://localhost:8080/images/avery.jpg',
+      author: 'Avery Matthews',
+      itinerary_count: 3,
+      followers: '20k',
+
+    },
+
+
   ]);
 };
