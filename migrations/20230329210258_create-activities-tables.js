@@ -1,22 +1,18 @@
-// exports.up = function (knex) {
-//     return knex.schema.createTable('post', (table) => {
-//         table.uuid('id').primary();
-//         table.string('user_name').notNullable();
-//         table.string('user_icon').notNullable();
-//         table.string('author').notNullable();
-//         table.string('city').notNullable();
-//         table.string('budget').notNullable();
-//         table.integer('likes').notNullable();
-//         table.integer('views').notNullable();
-//         table.integer('ratings').notNullable();
-//         table.integer('duration').notNullable();
-//         table.timestamps(true, true);
-//     });
-// };
+exports.up = function (knex) {
+    return knex.schema.createTable('activities', (table) => {
+        table.uuid('activity_id').primary();
+        table.string('activity_name').notNullable();
+        table.string('activity_type').notNullable();
+        table.string('cost');
+        table.string('activity_description').notNullable();
+        table.string('activity_image').notNullable();
+        table.timestamps(true, true);
+    });
+};
 
 
-// exports.down = function (knex) {
-//     return knex.schema.dropTable('post');
-// };
+exports.down = function (knex) {
+    return knex.schema.dropTable('activities');
+};
 
 
