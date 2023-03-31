@@ -37,6 +37,7 @@ exports.getByCity = (req, res) => {
             "trip_title"
         )
 
+        // modify result with search with space in between
         .where('city', 'like', '%' + req.params.city + '%')
         .then(data => {
             if (!data.length) {
@@ -48,8 +49,58 @@ exports.getByCity = (req, res) => {
         })
 
         .catch(err => {
-            res.status(404).send(`Error retrieving user ${req.params.user} ${err}`)
+            res.status(404).send(`Error finding ${req.params.city} ${err}`)
         })
 }
 
-// modify result with search with space in between
+// get a single itinerary by itinerary id
+exports.getByItId = (req, res) => {
+    knex('itinerary')
+        .select(
+            'itinerary.itinerary_id',
+            'city',
+            'budget',
+            'likes',
+            'ratings',
+            'duration',
+            'city_img',
+            'trip_title',
+            'date',
+            'description',
+            'day_id',
+            'day',
+            'activity_id',
+            'activity_name',
+            'activity_type',
+            'cost',
+            'activity_description',
+            'activity_image'
+        )
+        .innerJoin('day', 'itinerary.itinerary_id', 'day.itinerary_id')
+        .innerJoin('activities', function () {
+            this.on('day.activity_id1', '=', 'activities.activity_id')
+                .orOn('day.activity_id2', '=', 'activities.activity_id')
+                .orOn('day.activity_id3', '=', 'activities.activity_id')
+                .orOn('day.activity_id4', '=', 'activities.activity_id')
+                .orOn('day.activity_id5', '=', 'activities.activity_id')
+                .orOn('day.activity_id6', '=', 'activities.activity_id')
+                .orOn('day.activity_id7', '=', 'activities.activity_id')
+                .orOn('day.activity_id8', '=', 'activities.activity_id')
+                .orOn('day.activity_id9', '=', 'activities.activity_id')
+                .orOn('day.activity_id10', '=', 'activities.activity_id')
+        })
+        .where({ 'itinerary.itinerary_id': req.params.itineraryId })
+
+        .then(data => {
+            if (!data.length) {
+                return res
+                    .status(404)
+                    .send(`This itinerary ${req.params.itineraryId} is not found`)
+            }
+            res.status(200).json(data)
+        })
+
+        .catch(err => {
+            res.status(404).send(`Error finding itinerary ${req.params.itineraryId} ${err}`)
+        })
+}
