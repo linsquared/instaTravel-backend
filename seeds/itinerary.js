@@ -4,6 +4,8 @@ exports.seed = async function (knex) {
   await knex('itinerary').insert([
     {
       itinerary_id: '4829650317',
+      // consider removing username, icon, author and 
+      // add user id instead
       user_name: 'RoamingRaven',
       user_icon: 'http://localhost:8080/images/users/avery.jpg',
       author: 'Avery Matthews',
