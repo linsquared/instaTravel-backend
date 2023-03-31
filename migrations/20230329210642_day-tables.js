@@ -1,19 +1,18 @@
 exports.up = function (knex) {
     return knex.schema.createTable('day', (table) => {
-        table.uuid('itinerary_id');
-        table.string('user_name').notNullable();
-        table.string('city');
+        table.uuid('itinerary_id').notNullable();
+        table.uuid('day_id').primary().notNullable();
         table.string('day').notNullable();
-        table.string('activity_id').notNullable();
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
-        table.string('activity_id');
+        table.string('activity_id1');
+        table.string('activity_id2');
+        table.string('activity_id3');
+        table.string('activity_id4');
+        table.string('activity_id5');
+        table.string('activity_id6');
+        table.string('activity_id7');
+        table.string('activity_id8');
+        table.string('activity_id9');
+        table.string('activity_id10');
         table.timestamps(true, true);
     });
 };
