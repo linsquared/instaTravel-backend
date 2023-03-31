@@ -1,7 +1,7 @@
 exports.seed = async function (knex) {
   // Deletes ALL existing entries
-  await knex('activites').del();
-  await knex('activites').insert([
+  await knex('activities').del();
+  await knex('activities').insert([
     // chicago
     {
       activity_id: 'chi-6458321487291',

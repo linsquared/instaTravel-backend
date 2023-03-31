@@ -2,9 +2,8 @@ exports.seed = async function (knex) {
   // Deletes ALL existing entries
   await knex('itinerary').del();
   await knex('itinerary').insert([
-    //   egypt, singapore
     {
-      trip_id: '4829650317',
+      itinerary_id: '4829650317',
       user_name: 'RoamingRaven',
       user_icon: 'http://localhost:8080/images/users/avery.jpg',
       author: 'Avery Matthews',
@@ -21,7 +20,7 @@ exports.seed = async function (knex) {
 
     },
     {
-      trip_id: '1208376945',
+      itinerary_id: '1208376945',
       user_name: 'WanderingWave',
       user_icon: 'http://localhost:8080/images/users/maya.jpg',
       author: 'Maya Rivera',
@@ -38,7 +37,7 @@ exports.seed = async function (knex) {
 
     },
     {
-      trip_id: '6093842157',
+      itinerary_id: '6093842157',
       user_name: 'JetSetJenny',
       user_icon: 'http://localhost:8080/images/users/Jennifer.jpg',
       author: 'Jennifer Lee',
@@ -55,7 +54,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '3584217960',
+      itinerary_id: '3584217960',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -72,7 +71,7 @@ exports.seed = async function (knex) {
 
     },
     {
-      trip_id: '7491058362',
+      itinerary_id: '7491058362',
       user_name: 'NomadNate',
       user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
       author: 'Nathan Chen',
@@ -89,7 +88,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9316742085',
+      itinerary_id: '9316742085',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -106,7 +105,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '2065813794',
+      itinerary_id: '2065813794',
       user_name: 'RoamingRaven',
       user_icon: 'http://localhost:8080/images/users/avery.jpg',
       author: 'Avery Matthews',
@@ -123,7 +122,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '8576931024',
+      itinerary_id: '8576931024',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -140,7 +139,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5132879460',
+      itinerary_id: '5132879460',
       user_name: 'AdventurousAnna',
       user_icon: 'http://localhost:8080/images/users/anna.jpg',
       author: 'Anna Nguyen',
@@ -157,7 +156,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9753216840',
+      itinerary_id: '9753216840',
       user_name: 'NomadNate',
       user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
       author: 'Nathan Chen',
@@ -174,7 +173,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '6743192850',
+      itinerary_id: '6743192850',
       user_name: 'JetSetJenny',
       user_icon: 'http://localhost:8080/images/users/Jennifer.jpg',
       author: 'Jennifer Lee',
@@ -191,7 +190,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '1248630975',
+      itinerary_id: '1248630975',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -208,7 +207,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '3560829147',
+      itinerary_id: '3560829147',
       user_name: 'WanderingWave',
       user_icon: 'http://localhost:8080/images/users/maya.jpg',
       author: 'Maya Rivera',
@@ -225,7 +224,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '6925108347',
+      itinerary_id: '6925108347',
       user_name: 'NomadNate',
       user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
       author: 'Nathan Chen',
@@ -242,7 +241,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '8316092754',
+      itinerary_id: '8316092754',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -259,7 +258,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '2750691483',
+      itinerary_id: '2750691483',
       user_name: 'RoamingRaven',
       user_icon: 'http://localhost:8080/images/users/avery.jpg',
       author: 'Avery Matthews',
@@ -276,7 +275,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '4091567283',
+      itinerary_id: '4091567283',
       user_name: 'AdventurousAnna',
       user_icon: 'http://localhost:8080/images/users/anna.jpg',
       author: 'Anna Nguyen',
@@ -293,7 +292,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '6280351974',
+      itinerary_id: '6280351974',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -310,7 +309,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9378461025',
+      itinerary_id: '9378461025',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -327,7 +326,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5082371649',
+      itinerary_id: '5082371649',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -344,7 +343,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '4265809731',
+      itinerary_id: '4265809731',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -361,7 +360,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9481750236',
+      itinerary_id: '9481750236',
       user_name: 'NomadNate',
       user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
       author: 'Nathan Chen',
@@ -378,7 +377,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '3059274618',
+      itinerary_id: '3059274618',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -395,7 +394,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '6827315490',
+      itinerary_id: '6827315490',
       user_name: 'WanderingWave',
       user_icon: 'http://localhost:8080/images/users/maya.jpg',
       author: 'Maya Rivera',
@@ -412,7 +411,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9712356480',
+      itinerary_id: '9712356480',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -429,7 +428,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '7410293658',
+      itinerary_id: '7410293658',
       user_name: 'NomadNate',
       user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
       author: 'Nathan Chen',
@@ -446,7 +445,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '2106853479',
+      itinerary_id: '2106853479',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -463,7 +462,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5672981340',
+      itinerary_id: '5672981340',
       user_name: 'JetSetJenny',
       user_icon: 'http://localhost:8080/images/users/Jennifer.jpg',
       author: 'Jennifer Lee',
@@ -480,7 +479,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '8374051962',
+      itinerary_id: '8374051962',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -497,7 +496,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '2634809157',
+      itinerary_id: '2634809157',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -514,7 +513,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '4156092873',
+      itinerary_id: '4156092873',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -531,7 +530,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9267431508',
+      itinerary_id: '9267431508',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -548,7 +547,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '1785934620',
+      itinerary_id: '1785934620',
       user_name: 'WanderingWave',
       user_icon: 'http://localhost:8080/images/users/maya.jpg',
       author: 'Maya Rivera',
@@ -565,7 +564,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5801273649',
+      itinerary_id: '5801273649',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -582,7 +581,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '3048562791',
+      itinerary_id: '3048562791',
       user_name: 'NomadNate',
       user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
       author: 'Nathan Chen',
@@ -599,7 +598,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '7913462058',
+      itinerary_id: '7913462058',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -616,7 +615,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '1056829374',
+      itinerary_id: '1056829374',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -633,7 +632,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '4291638750',
+      itinerary_id: '4291638750',
       user_name: 'AdventurousAnna',
       user_icon: 'http://localhost:8080/images/users/anna.jpg',
       author: 'Anna Nguyen',
@@ -650,7 +649,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '6835912470',
+      itinerary_id: '6835912470',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -667,7 +666,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '8452069371',
+      itinerary_id: '8452069371',
       user_name: 'AlexaA',
       user_icon: 'http://localhost:8080/images/users/alexa.png',
       author: 'Alexa Casa',
@@ -684,7 +683,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5089362741',
+      itinerary_id: '5089362741',
       user_name: 'TumblingTom',
       user_icon: 'Tommy Tom',
       author: 'http://localhost:8080/images/users/tommy.jpg',
@@ -701,7 +700,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '1298437605',
+      itinerary_id: '1298437605',
       user_name: 'AdventurousAnna',
       user_icon: 'http://localhost:8080/images/users/anna.jpg',
       author: 'Anna Nguyen',
@@ -718,7 +717,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '2461587930',
+      itinerary_id: '2461587930',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -735,7 +734,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5729186304',
+      itinerary_id: '5729186304',
       user_name: 'AdventurousAnna',
       user_icon: 'http://localhost:8080/images/users/anna.jpg',
       author: 'Anna Nguyen',
@@ -752,7 +751,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '8714620935',
+      itinerary_id: '8714620935',
       user_name: 'DaringAmy',
       user_icon: 'http://localhost:8080/images/users/amy.png',
       author: 'Amy Armance',
@@ -769,7 +768,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '3459726180',
+      itinerary_id: '3459726180',
       user_name: 'TumblingTom',
       user_icon: 'http://localhost:8080/images/users/tommy.jpg',
       author: 'Tommy Tom',
@@ -786,7 +785,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '6028574319',
+      itinerary_id: '6028574319',
       user_name: 'GlobeTrotterGuy',
       user_icon: 'http://localhost:8080/images/users/Luke.jpg',
       author: 'Luke Harrison',
@@ -803,7 +802,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9742160583',
+      itinerary_id: '9742160583',
       user_name: 'AlexaA',
       user_icon: 'http://localhost:8080/images/users/alexa.png',
       author: 'Alexa Casa',
@@ -820,7 +819,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '3680452197',
+      itinerary_id: '3680452197',
       user_name: 'ZonningoutZ',
       user_icon: 'http://localhost:8080/images/users/zesty.png',
       author: 'Zesty Zhao',
@@ -837,7 +836,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '8916230745',
+      itinerary_id: '8916230745',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',
@@ -854,7 +853,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '5412736098',
+      itinerary_id: '5412736098',
       user_name: 'WanderingWave',
       user_icon: 'http://localhost:8080/images/users/maya.jpg',
       author: 'Maya Rivera',
@@ -871,7 +870,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '7082164953',
+      itinerary_id: '7082164953',
       user_name: 'AlexaA',
       user_icon: 'http://localhost:8080/images/users/alexa.png',
       author: 'Alexa Casa',
@@ -888,7 +887,7 @@ exports.seed = async function (knex) {
       // type: '',
     },
     {
-      trip_id: '9537140268',
+      itinerary_id: '9537140268',
       user_name: 'BrazilianLocalJa',
       user_icon: 'http://localhost:8080/images/users/jess.png',
       author: 'Jess A',

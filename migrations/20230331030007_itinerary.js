@@ -13,7 +13,7 @@ exports.up = function (knex) {
         table.string('city_img').notNullable();
         table.string('trip_title').notNullable();
         table.string('date').notNullable();
-        table.string('description').notNullable();
+        table.text('description').notNullable();
         table.timestamps(true, true);
     });
 };
@@ -22,5 +22,4 @@ exports.up = function (knex) {
 exports.down = function (knex) {
     return knex.schema.dropTable('itinerary');
 };
-
 

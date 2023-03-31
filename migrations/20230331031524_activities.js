@@ -4,8 +4,8 @@ exports.up = function (knex) {
         table.string('activity_name').notNullable();
         table.string('activity_type').notNullable();
         table.string('cost');
-        table.string('activity_description').notNullable();
-        table.string('activity_image').notNullable();
+        table.text('activity_description').notNullable();
+        table.string('activity_image')
         table.timestamps(true, true);
     });
 };
