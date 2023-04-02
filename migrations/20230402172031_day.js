@@ -1,11 +1,11 @@
 exports.up = function (knex) {
     return knex.schema.createTable('day', (table) => {
+        table.uuid('day_id').primary().notNullable();
         table.uuid('itinerary_id')
-            .referencces('itinerary.itinerary.id')
+            .references('itinerary.itinerary_id')
             .onUpdate("CASCADE")
             .onDelete("CASCADE")
             .notNullable();
-        table.uuid('day_id').primary().notNullable();
         table.string('day').notNullable();
         table.string('activity_id1');
         table.string('activity_id2');

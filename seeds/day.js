@@ -3,400 +3,390 @@ exports.seed = async function (knex) {
   await knex('day').del();
   await knex('day').insert([
     {
-      itinerary_id: '4829650317',
       day_id: 'E1Y5X3B2K7',
+      itinerary_id: '4829650317',
       day: '1',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: ''
     },
     {
-      itinerary_id: '4829650317',
       day_id: 'W9D0A1Z3C2',
+      itinerary_id: '4829650317',
       day: '2',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '4829650317',
       day_id: 'S4F6G8J7H9',
+      itinerary_id: '4829650317',
       day: '3',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '4829650317',
       day_id: 'L2N8M1K0T3',
-      day: '4',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
-    },
-    {
       itinerary_id: '4829650317',
+      day: '4',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
+    },
+    {
       day_id: 'R6S1B4Z8Y0',
+      itinerary_id: '4829650317',
       day: '5',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
-
     {
-      itinerary_id: '1208376945',
       day_id: 'P3F7D9N0H2',
+      itinerary_id: '1208376945',
       day: '1',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '1208376945',
       day_id: 'U9T4X2J7G1',
-      day: '2',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
-
-    },
-    {
       itinerary_id: '1208376945',
+      day: '2',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
+    },
+    {
       day_id: 'V2W6Y3A1B0',
+      itinerary_id: '1208376945',
       day: '3',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
-
-
     {
-      itinerary_id: '6093842157',
       day_id: 'K7R8L3T6N1',
+      itinerary_id: '6093842157',
       day: '1',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'M4S9G1H0C2',
+      itinerary_id: '6093842157',
       day: '2',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'N2T4K0Z1D8',
+      itinerary_id: '6093842157',
       day: '3',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'X5J9B2H1Y0',
-      day: '4',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
-    },
-    {
       itinerary_id: '6093842157',
+      day: '4',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
+    },
+
+
+    {
       day_id: 'B0F2W8G6T4',
+      itinerary_id: '6093842157',
       day: '5',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
 
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'C1Z8D7S5F9',
+      itinerary_id: '6093842157',
       day: '6',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
 
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'H9Y3R6M8L1',
+      itinerary_id: '6093842157',
       day: '7',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
 
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'T5B7N2K3J1',
+      itinerary_id: '6093842157',
       day: '8',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
     {
-      itinerary_id: '6093842157',
       day_id: 'A3X5C9V7F1',
-      day: '9',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
-
-    },
-    {
       itinerary_id: '6093842157',
+      day: '9',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
+
+    },
+    {
       day_id: 'E7R0J3K2Z6',
+      itinerary_id: '6093842157',
       day: '10',
-      activity_id1: '',
-      activity_id2: '',
-      activity_id3: '',
-      activity_id4: '',
-      activity_id5: '',
+      // activity_id1: '',
+      // activity_id2: '',
+      // activity_id3: '',
+      // activity_id4: '',
+      // activity_id5: '',
     },
 
     {
-      itinerary_id: '3584217960',
       day_id: 'S2N5H1B3Y9',
+      itinerary_id: '3584217960',
       day: '1',
 
     },
     {
-      itinerary_id: '3584217960',
       day_id: 'D9C8T0M7L2',
+      itinerary_id: '3584217960',
       day: '2',
 
     },
     {
-      itinerary_id: '3584217960',
       day_id: 'P5F7G1K8J0',
+      itinerary_id: '3584217960',
       day: '3',
 
     },
     {
-      itinerary_id: '3584217960',
       day_id: 'Q6L3T7N8H2',
+      itinerary_id: '3584217960',
       day: '4',
 
     },
     {
-      itinerary_id: '3584217960',
       day_id: 'Q4T9X7Z0N1',
+      itinerary_id: '3584217960',
       day: '5',
 
     },
     {
-      itinerary_id: '3584217960',
       day_id: 'U6S1J2D4B0',
-      day: '6',
-
-    },
-    {
       itinerary_id: '3584217960',
+      day: '6',
+
+    },
+    {
       day_id: 'V0W8F2C3G9',
+      itinerary_id: '3584217960',
       day: '7',
 
     },
 
     {
-      itinerary_id: '7491058362',
       day_id: 'L3K6N2H7M1',
+      itinerary_id: '7491058362',
       day: '1',
     },
     {
-      itinerary_id: '7491058362',
       day_id: 'Y1R7Z3B5X0',
-      day: '2',
-    },
-    {
       itinerary_id: '7491058362',
+      day: '2',
+    },
+    {
       day_id: 'M9T6N7C0J1',
+      itinerary_id: '7491058362',
       day: '3',
     },
 
     {
-      itinerary_id: '9316742085',
       day_id: 'W0H2F5G1K7',
+      itinerary_id: '9316742085',
       day: '1',
     },
     {
-      itinerary_id: '9316742085',
       day_id: 'J1D8B6L9S5',
+      itinerary_id: '9316742085',
       day: '2',
     },
     {
-      itinerary_id: '9316742085',
       day_id: 'Z6Y0A8C7T2',
+      itinerary_id: '9316742085',
       day: '3',
     },
     {
-      itinerary_id: '9316742085',
       day_id: 'F2K1N5J3M8',
-      day: '4',
-    },
-    {
       itinerary_id: '9316742085',
+      day: '4',
+    },
+    {
       day_id: 'G1T6L0B3H9',
+      itinerary_id: '9316742085',
       day: '5',
     },
     {
-      itinerary_id: '2065813794',
       day_id: 'X3R5Z0D1V6',
+      itinerary_id: '2065813794',
       day: '1',
     },
     {
-      itinerary_id: '2065813794',
       day_id: 'B8C7K6N9S1',
-      day: '2',
-    },
-    {
       itinerary_id: '2065813794',
+      day: '2',
+    },
+    {
       day_id: 'H5J2G8F0M3',
+      itinerary_id: '2065813794',
       day: '3',
     },
 
     {
-      itinerary_id: '8576931024',
       day_id: 'J5F7R9M1P0',
-      day: '1',
-    },
-    {
       itinerary_id: '8576931024',
+      day: '1',
+    },
+    {
       day_id: 'P7Z3T2W8D0',
+      itinerary_id: '8576931024',
       day: '2',
     },
 
     {
-      itinerary_id: '5132879460',
       day_id: 'Q5S2F0Y1L8',
+      itinerary_id: '5132879460',
       day: '1',
     },
     {
-      itinerary_id: '5132879460',
       day_id: 'N4M1K6H7B0',
+      itinerary_id: '5132879460',
       day: '2',
     },
     {
-      itinerary_id: '5132879460',
       day_id: 'U8R0X5C1V3',
+      itinerary_id: '5132879460',
       day: '3',
     },
     {
-      itinerary_id: '5132879460',
       day_id: 'L6D8T2J3N0',
+      itinerary_id: '5132879460',
       day: '4',
     },
     {
-      itinerary_id: '5132879460',
       day_id: 'V5G2B9W4F1',
+      itinerary_id: '5132879460',
       day: '5',
     },
     {
-      itinerary_id: '5132879460',
       day_id: 'R4J5K7H0N1',
+      itinerary_id: '5132879460',
       day: '6',
     },
 
     {
-      itinerary_id: '9753216840',
       day_id: 'A2S6C1Z0F8',
-      day: '1',
-    },
-    {
       itinerary_id: '9753216840',
+      day: '1',
+    },
+    {
       day_id: 'E0X9B6Y2T7',
+      itinerary_id: '9753216840',
       day: '2',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'Z8D5C2L6M1',
+      itinerary_id: '6743192850',
       day: '1',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'Y1F0V2W6G9',
+      itinerary_id: '6743192850',
       day: '2',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'S3K9J2H8R6',
+      itinerary_id: '6743192850',
       day: '3',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'M6T1N0C3D2',
+      itinerary_id: '6743192850',
       day: '4',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'D8G2K4N6H9',
+      itinerary_id: '6743192850',
       day: '5',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'B9X3Z0V6H2',
+      itinerary_id: '6743192850',
       day: '6',
     },
 
     {
-      itinerary_id: '6743192850',
       day_id: 'F8G6L0R5J1',
+      itinerary_id: '6743192850',
       day: '7',
     },
 
     {
-      itinerary_id: '1248630975',
       day_id: 'R5G3L0J1M8',
+      itinerary_id: '1248630975',
       day: '1',
       activity_id1: 'chi-4237659180987',
       activity_id2: 'chi-9023487654321',
@@ -407,8 +397,8 @@ exports.seed = async function (knex) {
 
     },
     {
-      itinerary_id: '1248630975',
       day_id: 'C1T7D9N2K6',
+      itinerary_id: '1248630975',
       day: '2',
       activity_id1: 'chi-6458321487291',
       activity_id2: 'chi-3928671151243',
@@ -420,8 +410,8 @@ exports.seed = async function (knex) {
 
     },
     {
-      itinerary_id: '1248630975',
       day_id: 'W5H0Y1S8J2',
+      itinerary_id: '1248630975',
       day: '3',
       activity_id1: 'chi-2938465190783',
       activity_id2: 'chi-5167903248170',
@@ -434,8 +424,8 @@ exports.seed = async function (knex) {
 
     },
     {
-      itinerary_id: '1248630975',
       day_id: 'Q2F6Z1B0K8',
+      itinerary_id: '1248630975',
       day: '4',
       activity_id1: 'chi-6458321487291',
       activity_id2: 'chi-6432908175362',
@@ -444,8 +434,8 @@ exports.seed = async function (knex) {
 
     },
     {
-      itinerary_id: '1248630975',
       day_id: 'N9M5J2L1S4',
+      itinerary_id: '1248630975',
       day: '5',
       activity_id1: 'chi-4298710365498',
       activity_id2: 'chi-7084632109854',
@@ -455,8 +445,8 @@ exports.seed = async function (knex) {
     },
 
     {
-      itinerary_id: '3560829147',
       day_id: 'U0R4X1T7G',
+      itinerary_id: '3560829147',
       day: '1',
       activity_id1: 'chi-6458321487291',
       activity_id2: 'chi-3928671151243',
@@ -469,8 +459,8 @@ exports.seed = async function (knex) {
 
     },
     {
-      itinerary_id: '3560829147',
       day_id: 'E2T6C8L1S7',
+      itinerary_id: '3560829147',
       day: '2',
       activity_id1: 'chi-3901248765032',
       activity_id2: 'chi-7860543291805',
@@ -480,8 +470,8 @@ exports.seed = async function (knex) {
 
     },
     {
-      itinerary_id: '3560829147',
       day_id: 'W3K1J7N2H8',
+      itinerary_id: '3560829147',
       day: '3',
       activity_id1: 'chi-1986734590876',
       activity_id2: 'chi-7084632109854',
