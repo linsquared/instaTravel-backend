@@ -9,9 +9,10 @@ exports.seed = async function (knex) {
       author: 'Avery Matthews',
       itinerary_count: 3,
       followers: '20k',
+      password: 'Password.123',
+      email: 'averyM@hotmail.com'
 
     },
-
     {
       user_id: '6815302947',
       user_name: 'WanderingWave',
@@ -19,7 +20,8 @@ exports.seed = async function (knex) {
       author: 'Maya Rivera',
       itinerary_count: 5,
       followers: '964',
-
+      password: 'Password.123',
+      email: 'mayarivera@example.com'
     },
 
     {
@@ -29,7 +31,8 @@ exports.seed = async function (knex) {
       author: 'Luke Harrison',
       itinerary_count: 7,
       followers: '10k',
-
+      password: 'Password.123',
+      email: 'lukeharrison@example.com'
     },
 
     {
@@ -39,7 +42,8 @@ exports.seed = async function (knex) {
       author: 'Jennifer Lee',
       itinerary_count: 3,
       followers: '15',
-
+      password: 'Password.123',
+      email: 'jenniferlee@example.com'
     },
 
     {
@@ -49,7 +53,8 @@ exports.seed = async function (knex) {
       author: 'Nathan Chen',
       itinerary_count: 6,
       followers: '1568',
-
+      password: 'Password.123',
+      email: 'nathanchen@example.com'
     },
 
     {
@@ -59,7 +64,8 @@ exports.seed = async function (knex) {
       author: 'Anna Nguyen',
       itinerary_count: 5,
       followers: '100k',
-
+      password: 'Password.123',
+      email: 'annanguyen@example.com'
     },
 
     {
@@ -69,7 +75,8 @@ exports.seed = async function (knex) {
       author: 'Zesty Zhao',
       itinerary_count: 1,
       followers: '3',
-
+      password: 'Password.123',
+      email: 'zesty.zhao@example.com',
     },
 
     {
@@ -79,7 +86,8 @@ exports.seed = async function (knex) {
       author: 'Amy Armance',
       itinerary_count: 10,
       followers: '200k',
-
+      password: 'Password.123',
+      email: 'amyarmance@example.com',
     },
 
     {
@@ -89,7 +97,8 @@ exports.seed = async function (knex) {
       author: 'Jess A',
       itinerary_count: 8,
       followers: '156k',
-
+      password: 'Password.123',
+      email: 'jessica.a@example.com'
     },
 
     {
@@ -99,7 +108,8 @@ exports.seed = async function (knex) {
       author: 'Alexa Casa',
       itinerary_count: 3,
       followers: '20k',
-
+      password: 'Password.123',
+      email: 'alexacasa@example.com'
     },
 
     {
@@ -109,7 +119,8 @@ exports.seed = async function (knex) {
       author: 'Tommy Tom',
       itinerary_count: 2,
       followers: '46',
-
+      password: 'Password.123',
+      email: 'DoubleTom@example.com'
     },
 
   ]);
