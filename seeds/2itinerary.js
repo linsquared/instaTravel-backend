@@ -797,6 +797,5 @@ exports.seed = async function (knex) {
       // type: '',
     },
 
-
   ]);
 };

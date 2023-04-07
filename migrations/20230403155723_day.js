@@ -1,7 +1,7 @@
 exports.up = function (knex) {
     return knex.schema.createTable('day', (table) => {
-        table.uuid('day_id').primary().notNullable();
-        table.uuid('itinerary_id')
+        table.string('day_id').primary().notNullable();
+        table.string('itinerary_id')
             .references('itinerary.itinerary_id')
             .onUpdate("CASCADE")
             .onDelete("CASCADE")

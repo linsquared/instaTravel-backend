@@ -4,15 +4,14 @@ exports.getAll = (_req, res) => {
     knex('itinerary')
         .select(
             "itinerary_id",
-            "user_name",
-            "user_icon",
-            "author",
+            "user_id",
             "city",
             "budget",
             "views",
             "likes",
             "ratings",
-            "duration"
+            "duration",
+            "city_img"
         )
         .then(data => {
             res.status(200).json(data)
