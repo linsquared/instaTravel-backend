@@ -7,7 +7,7 @@ exports.up = function (knex) {
             .onDelete("CASCADE")
             .notNullable();
         table.string('day').notNullable();
-        table.string('activity_id1');
+        table.string('activity_id1').defaultTo('');
         table.string('activity_id2');
         table.string('activity_id3');
         table.string('activity_id4');

@@ -8,11 +8,11 @@ exports.up = function (knex) {
             .onDelete("CASCADE");
         table.string('city').notNullable();
         table.string('budget').notNullable();
-        table.integer('views');
-        table.integer('likes');
-        table.integer('ratings');
+        table.integer('views').defaultTo(0);
+        table.integer('likes').defaultTo(0);
+        table.integer('ratings').defaultTo(0);
         table.integer('duration').notNullable();
-        table.string('city_img');
+        table.string('city_img').defaultTo('');
         table.string('trip_title').notNullable();
         table.string('date').notNullable();
         table.text('description').notNullable();
