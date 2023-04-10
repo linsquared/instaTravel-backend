@@ -13,7 +13,8 @@ exports.getUsers = (_req, res) => {
             "user_icon",
             "author",
             "itinerary_count",
-            "followers"
+            "followers",
+            "email"
         )
         .then(data => {
             res.status(200).json(data)
@@ -30,7 +31,8 @@ exports.getByUser = (req, res) => {
             "user_icon",
             "author",
             "itinerary_count",
-            "followers"
+            "followers",
+            "email"
         )
 
         .where(function () {

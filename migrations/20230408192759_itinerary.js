@@ -6,6 +6,8 @@ exports.up = function (knex) {
             .references('users.user_id')
             .onUpdate("CASCADE")
             .onDelete("CASCADE");
+        table.string('user_name').notNullable();
+        table.string('user_icon').notNullable();
         table.string('city').notNullable();
         table.string('budget').notNullable();
         table.integer('views').defaultTo(0);

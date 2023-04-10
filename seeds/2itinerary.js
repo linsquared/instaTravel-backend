@@ -5,6 +5,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '4829650317',
             user_id: '9318657024',
+            user_name: 'RoamingRaven',
+            user_icon: 'http://localhost:8080/images/users/avery.jpg',
             city: 'Tokyo, Japan',
             budget: '$$',
             views: 400,
@@ -20,6 +22,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '1208376945',
             user_id: '6815302947',
+            user_name: 'WanderingWave',
+            user_icon: 'http://localhost:8080/images/users/maya.jpg',
             city: 'Tokyo, Japan',
             budget: '$$$',
             views: 789,
@@ -35,6 +39,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6093842157',
             user_id: '8204639571',
+            user_name: 'JetSetJenny',
+            user_icon: 'http://localhost:8080/images/users/Jennifer.jpg',
             city: 'Tokyo, Japan',
             budget: '$$',
             views: 20,
@@ -50,13 +56,15 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '3584217960',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'London, Uk',
             budget: '$$',
             views: 99532,
             likes: 5622,
             ratings: 4,
             duration: 7,
-            city_img: 'http://localhost:8080/images/cities/london.jpg',
+            city_img: 'http://localhost:8080/images/cities/london1.jpg',
             trip_title: "London Calling: The Best of Britain's Capital City",
             date: '07/17/2021',
             description: "Discover the iconic sights and sounds of London, from the majestic Tower Bridge to the bustling West End theatre district.",
@@ -65,13 +73,15 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '7491058362',
             user_id: '3152908764',
+            user_name: 'NomadNate',
+            user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
             city: 'London, Uk',
             budget: '$$$',
             views: 6789,
             likes: 255,
             ratings: 4.5,
             duration: 3,
-            city_img: 'http://localhost:8080/images/cities/london.jpg',
+            city_img: 'http://localhost:8080/images/cities/london2.jpg',
             trip_title: "Uncovering London's Hidden Gems: A Journey off the Beaten Path",
             date: '07/12/2021',
             description: "Discover the lesser-known, hidden corners of London, from quirky independent shops and markets to picturesque hidden gardens and parks.",
@@ -80,6 +90,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9316742085',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'London, Uk',
             budget: '$$',
             views: 5671,
@@ -95,6 +107,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '2065813794',
             user_id: '9318657024',
+            user_name: 'RoamingRaven',
+            user_icon: 'http://localhost:8080/images/users/avery.jpg',
             city: 'New York City, USA',
             budget: '$$$$',
             views: 6789,
@@ -110,6 +124,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '8576931024',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'New York City, USA',
             budget: '$$',
             views: 66943,
@@ -125,6 +141,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5132879460',
             user_id: '7639841250',
+            user_name: 'AdventurousAnna',
+            user_icon: 'http://localhost:8080/images/users/anna.jpg',
             city: 'New York City, USA',
             budget: '$$$',
             views: 65300,
@@ -140,6 +158,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9753216840',
             user_id: '3152908764',
+            user_name: 'NomadNate',
+            user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
             city: 'New York City, USA',
             budget: '$$',
             views: 11001,
@@ -155,6 +175,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6743192850',
             user_id: '8204639571',
+            user_name: 'JetSetJenny',
+            user_icon: 'http://localhost:8080/images/users/Jennifer.jpg',
             city: 'New York City, USA',
             budget: '$$$$',
             views: 5,
@@ -170,6 +192,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '1248630975',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Chicago, USA',
             budget: '$$$',
             views: 563,
@@ -185,6 +209,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '3560829147',
             user_id: '6815302947',
+            user_name: 'WanderingWave',
+            user_icon: 'http://localhost:8080/images/users/maya.jpg',
             city: 'Chicago, USA',
             budget: '$$',
             views: 7890,
@@ -199,6 +225,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6925108347',
             user_id: '3152908764',
+            user_name: 'NomadNate',
+            user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
             city: 'Paris, France',
             budget: '$$$$',
             views: 45890,
@@ -214,6 +242,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '8316092754',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Paris, France',
             budget: '$$$',
             views: 11582,
@@ -229,6 +259,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '2750691483',
             user_id: '9318657024',
+            user_name: 'RoamingRaven',
+            user_icon: 'http://localhost:8080/images/users/avery.jpg',
             city: 'Paris, France',
             budget: '$$',
             views: 5679,
@@ -244,6 +276,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '4091567283',
             user_id: '7639841250',
+            user_name: 'AdventurousAnna',
+            user_icon: 'http://localhost:8080/images/users/anna.jpg',
             city: 'Paris, France',
             budget: '$$$',
             views: 99521,
@@ -259,6 +293,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6280351974',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Paris, France',
             budget: '$$',
             views: 1930,
@@ -274,6 +310,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9378461025',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'Rome, Italy',
             budget: '$$',
             views: 9722,
@@ -289,6 +327,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5082371649',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'Rome, Italy',
             budget: '$$',
             views: 90075,
@@ -304,6 +344,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '4265809731',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Milan, Italy',
             budget: '$$',
             views: 77457,
@@ -319,6 +361,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9481750236',
             user_id: '3152908764',
+            user_name: 'NomadNate',
+            user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
             city: 'Venice, Italy',
             budget: '$$$',
             views: 567,
@@ -334,6 +378,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '3059274618',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'Bangkok, Thailand',
             budget: '$$',
             views: 88932,
@@ -349,6 +395,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6827315490',
             user_id: '6815302947',
+            user_name: 'WanderingWave',
+            user_icon: 'http://localhost:8080/images/users/maya.jpg',
             city: 'Bangkok, Thailand',
             budget: '$$',
             views: 12008,
@@ -364,6 +412,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9712356480',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Bangkok, Thailand',
             budget: '$',
             views: 729,
@@ -379,6 +429,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '7410293658',
             user_id: '3152908764',
+            user_name: 'NomadNate',
+            user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
             city: 'Hanoi, Vietnam',
             budget: '$$',
             views: 2097,
@@ -394,6 +446,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '2106853479',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Santorini, Greece',
             budget: '$$',
             views: 7795,
@@ -409,6 +463,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5672981340',
             user_id: '8204639571',
+            user_name: 'JetSetJenny',
+            user_icon: 'http://localhost:8080/images/users/Jennifer.jpg',
             city: 'Santorini, Greece',
             budget: '$$$',
             views: 74,
@@ -424,6 +480,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '8374051962',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Amsterdam, Netherland',
             budget: '$$',
             views: 56890,
@@ -439,6 +497,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '2634809157',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'Amsterdam, Netherland',
             budget: '$$',
             views: 5521,
@@ -454,6 +514,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '4156092873',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Amsterdam, Netherland',
             budget: '$$',
             views: 781,
@@ -469,6 +531,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9267431508',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'Rio de janeiro, Brazil',
             budget: '$',
             views: 80991,
@@ -484,6 +548,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '1785934620',
             user_id: '6815302947',
+            user_name: 'WanderingWave',
+            user_icon: 'http://localhost:8080/images/users/maya.jpg',
             city: 'Rio de janeiro, Brazil',
             budget: '$$',
             views: 674,
@@ -499,6 +565,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5801273649',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Rio de janeiro, Brazil',
             budget: '$$',
             views: 88621,
@@ -514,6 +582,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '3048562791',
             user_id: '3152908764',
+            user_name: 'NomadNate',
+            user_icon: 'http://localhost:8080/images/users/Nathan.jpg',
             city: 'Lisbon, Portugal',
             budget: '$$',
             views: 567,
@@ -529,6 +599,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '7913462058',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Lisbon, Portugal',
             budget: '$$$',
             views: 55292,
@@ -544,6 +616,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '1056829374',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Lisbon, Portugal',
             budget: '$',
             views: 567,
@@ -559,6 +633,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '4291638750',
             user_id: '7639841250',
+            user_name: 'AdventurousAnna',
+            user_icon: 'http://localhost:8080/images/users/anna.jpg',
             city: 'Lisbon, Portugal',
             budget: '$$',
             views: 45190,
@@ -574,6 +650,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6835912470',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Reykjavik Iceland',
             budget: '$$',
             views: 77451,
@@ -589,6 +667,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '8452069371',
             user_id: '4819062379',
+            user_name: 'AlexaA',
+            user_icon: 'http://localhost:8080/images/users/alexa.png',
             city: 'Reykjavik Iceland',
             budget: '$$$',
             views: 692,
@@ -604,6 +684,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5089362741',
             user_id: '2950384167',
+            user_name: 'TumblingTom',
+            user_icon: 'http://localhost:8080/images/users/tommy.jpg',
             city: 'Singapore',
             budget: '$$$',
             views: 50,
@@ -619,6 +701,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '1298437605',
             user_id: '7639841250',
+            user_name: 'AdventurousAnna',
+            user_icon: 'http://localhost:8080/images/users/anna.jpg',
             city: 'Singapore',
             budget: '$$',
             views: 70002,
@@ -634,6 +718,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '2461587930',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Barcelona, Spain',
             budget: '$$',
             views: 5672,
@@ -649,6 +735,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5729186304',
             user_id: '7639841250',
+            user_name: 'AdventurousAnna',
+            user_icon: 'http://localhost:8080/images/users/anna.jpg',
             city: 'Barcelona, Spain',
             budget: '$$',
             views: 14693,
@@ -664,6 +752,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '8714620935',
             user_id: '9025687431',
+            user_name: 'DaringAmy',
+            user_icon: 'http://localhost:8080/images/users/amy.png',
             city: 'Madrid, Spain',
             budget: '$$',
             views: 5521,
@@ -679,6 +769,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '3459726180',
             user_id: '2950384167',
+            user_name: 'TumblingTom',
+            user_icon: 'http://localhost:8080/images/users/tommy.jpg',
             city: 'Cairo, Eygpt',
             budget: '$$$',
             views: 70,
@@ -694,6 +786,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '6028574319',
             user_id: '4976132085',
+            user_name: 'GlobeTrotterGuy',
+            user_icon: 'http://localhost:8080/images/users/Luke.jpg',
             city: 'Cairo, Eygpt',
             budget: '$',
             views: 7892,
@@ -709,6 +803,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9742160583',
             user_id: '4819062379',
+            user_name: 'AlexaA',
+            user_icon: 'http://localhost:8080/images/users/alexa.png',
             city: 'Beijing, China',
             budget: '$$$',
             views: 11629,
@@ -724,6 +820,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '3680452197',
             user_id: '1582973460',
+            user_name: 'ZonningoutZ',
+            user_icon: 'http://localhost:8080/images/users/zesty.png',
             city: 'Beijing, China',
             budget: '$$',
             views: 7,
@@ -739,6 +837,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '8916230745',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'Shanghai, China',
             budget: '$$',
             views: 9925,
@@ -754,6 +854,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '5412736098',
             user_id: '6815302947',
+            user_name: 'WanderingWave',
+            user_icon: 'http://localhost:8080/images/users/maya.jpg',
             city: 'Masai Mara, Kenya',
             budget: '$$',
             views: 1086,
@@ -769,6 +871,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '7082164953',
             user_id: '4819062379',
+            user_name: 'AlexaA',
+            user_icon: 'http://localhost:8080/images/users/alexa.png',
             city: 'Accra, Ghana',
             budget: '$',
             views: 6702,
@@ -784,6 +888,8 @@ exports.seed = async function (knex) {
         {
             itinerary_id: '9537140268',
             user_id: '6078925341',
+            user_name: 'BrazilianLocalJa',
+            user_icon: 'http://localhost:8080/images/users/jess.png',
             city: 'El nido, Philippines',
             budget: '$',
             views: 6902,
