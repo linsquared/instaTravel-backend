@@ -903,5 +903,22 @@ exports.seed = async function (knex) {
             // type: '',
         },
 
+        {
+            itinerary_id: '2065813795',
+            user_id: '630163fc-69c5-4745-ab50-e65fba71ea22',
+            user_name: 'lintravels',
+            user_icon: 'http://localhost:8080/images/users/sushi.jpg',
+            city: 'New York City, USA',
+            budget: '$$',
+            views: 0,
+            likes: 0,
+            ratings: 0,
+            duration: 3,
+            city_img: 'http://localhost:8080/images/cities/nyc5.jpg',
+            trip_title: "The Big Apple Awaits: Exploring the Best of New York City",
+            date: '06/16/2022',
+            description: "Discover the vibrant energy of NYC, from the iconic landmarks of the Statue of Liberty and the Empire State Building to the world-famous museums and galleries of Museum Mile.",
+        },
+
     ]);
 };

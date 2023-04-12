@@ -59,44 +59,55 @@ exports.getByCity = (req, res) => {
         })
 }
 
-// get by each id
+// get by each itinerary id
 exports.getByItId = (req, res) => {
-    knex('itinerary')
+    knex('day')
         .select(
-            'itinerary.itinerary_id',
-            'day_id',
-            'day',
-            knex.raw(`JSON_OBJECT('activity_id1', JSON_OBJECT('activity_id', activities.activity_id, 'activity_name', activities.activity_name, 'activity_type', activities.activity_type, 'cost', activities.cost, 'activity_description', activities.activity_description, 'activity_image', activities.activity_image), 'activity_id2', JSON_OBJECT('activity_id', activities2.activity_id, 'activity_name', activities2.activity_name, 'activity_type', activities2.activity_type, 'cost', activities2.cost, 'activity_description', activities2.activity_description, 'activity_image', activities2.activity_image), 'activity_id3', JSON_OBJECT('activity_id', activities3.activity_id, 'activity_name', activities3.activity_name, 'activity_type', activities3.activity_type, 'cost', activities3.cost, 'activity_description', activities3.activity_description, 'activity_image', activities3.activity_image), 'activity_id4', JSON_OBJECT('activity_id', activities4.activity_id, 'activity_name', activities4.activity_name, 'activity_type', activities4.activity_type, 'cost', activities4.cost, 'activity_description', activities4.activity_description, 'activity_image', activities4.activity_image), 'activity_id5', JSON_OBJECT('activity_id', activities5.activity_id, 'activity_name', activities5.activity_name, 'activity_type', activities5.activity_type, 'cost', activities5.cost, 'activity_description', activities5.activity_description, 'activity_image', activities5.activity_image)) AS activities`)
+            'day.day_id',
+            'day.day',
+            knex.raw(`JSON_OBJECT('activity_id', activities.activity_id, 'activity_name', activities.activity_name, 'activity_type', activities.activity_type, 'cost', activities.cost, 'activity_description', activities.activity_description, 'activity_image', activities.activity_image) AS activity`)
         )
-        .innerJoin('day', 'itinerary.itinerary_id', 'day.itinerary_id')
-        .leftJoin('activities', 'activities.activity_id', '=', 'day.activity_id1')
-        .leftJoin('activities AS activities2', 'activities2.activity_id', '=', 'day.activity_id2')
-        .leftJoin('activities AS activities3', 'activities3.activity_id', '=', 'day.activity_id3')
-        .leftJoin('activities AS activities4', 'activities4.activity_id', '=', 'day.activity_id4')
-        .leftJoin('activities AS activities5', 'activities5.activity_id', '=', 'day.activity_id5')
-        .where('itinerary.itinerary_id', req.params.itineraryId)
-        .groupBy('itinerary.itinerary_id', 'day_id', 'day', 'activities.activity_id', 'activities.activity_id', 'activities.activity_id', 'activities.activity_id', 'activities.activity_id', 'activities')
+        .leftJoin('activities', 'activities.activity_id', '=', 'day.activity_id')
+        .where('day.itinerary_id', req.params.itineraryId)
+        .orderBy('day.day_id')
         .then(data => {
             if (!data.length) {
-                return res.status(404).send(`This itinerary ${req.params.itineraryId} is not found`)
+                return res.status(404).send(`No day data found for itinerary ${req.params.itineraryId}`)
             }
             const formattedData = [];
 
+            let prevDayId = null;
+            let prevDay = null;
+            let activities = [];
+
             for (const item of data) {
-                const activities = JSON.parse(item.activities);
-                const activityArray = [];
-
-                for (const activity in activities) {
-                    activityArray.push(activities[activity]);
+                if (item.day_id !== prevDayId) {
+                    if (prevDayId !== null) {
+                        formattedData.push({
+                            day_id: prevDayId,
+                            day: prevDay,
+                            activity: activities
+                        });
+                    }
+                    activities = [];
                 }
+                prevDayId = item.day_id;
+                prevDay = item.day;
 
-                item.activities = activityArray;
-                formattedData.push(item);
+                if (item.activity) {
+                    activities.push(JSON.parse(item.activity));
+                }
             }
+            formattedData.push({
+                day_id: prevDayId,
+                day: prevDay,
+                activity: activities
+            });
 
             res.status(200).json(formattedData);
         })
         .catch(err => {
-            res.status(404).send(`Error finding itinerary ${req.params.itineraryId} ${err}`)
+            res.status(404).send(`Error finding day data for itinerary ${req.params.itineraryId} ${err}`)
         })
 }
+

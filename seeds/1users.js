@@ -123,5 +123,17 @@ exports.seed = async function (knex) {
       email: 'DoubleTom@example.com'
     },
 
+    {
+      user_id: '630163fc-69c5-4745-ab50-e65fba71ea22',
+      user_name: 'lintravels',
+      user_icon: 'http://localhost:8080/images/users/sushi.jpg',
+      author: 'Lin squared',
+      itinerary_count: 1,
+      followers: '17',
+      password: '$2a$10$RguaZV89lHWXNUNHi3jiuOhnu8Ug5dhpn1XnCHx6SzI8KxXeo3MGG',
+      email: 'abc@yahoo.com'
+
+    }
+
   ]);
 };
