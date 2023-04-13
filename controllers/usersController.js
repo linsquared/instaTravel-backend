@@ -92,6 +92,43 @@ exports.login = (req, res) => {
 }
 
 // come back to this to send the right info 
+// exports.profile = (req, res) => {
+//     // If there is no auth header provided
+//     if (!req.headers.authorization) return res.send("PLEASE LOGIN!");
+
+//     // Parse the bearer token
+//     const authHeader = req.headers.authorization;
+//     const authToken = authHeader.split(" ")[1]; // Bearer JWT
+
+//     try {
+//         const decoded = jwt.verify(authToken, process.env.JWT_KEY);
+//         const username = decoded.username;
+
+//         // Fetch user data from users table
+//         knex('users')
+//             .where('user_name', username)
+//             .select('*')
+//             .then(userData => {
+//                 const user = userData[0];
+
+//                 // Fetch itinerary data from itinerary table
+//                 knex('itinerary')
+//                     .where('user_name', username)
+//                     .select('*')
+//                     .then(itineraryData => {
+//                         const itinerary = itineraryData[0];
+
+//                         return res.send({ user, itinerary });
+//                     })
+//             })
+
+//     } catch (error) {
+//         res.send(error)
+//     }
+// }
+
+
+
 exports.profile = (req, res) => {
     // If there is no auth header provided
     if (!req.headers.authorization) return res.send("PLEASE LOGIN!");
@@ -106,16 +143,19 @@ exports.profile = (req, res) => {
 
         // Fetch data from users and itinerary tables
         knex('users')
-            .leftJoin('itinerary', 'users.user_name', 'itinerary.user_name')
+            // .leftJoin('itinerary', 'users.user_name', 'itinerary.user_name')
             .where('users.user_name', username)
-            .select('users.*', 'itinerary.*')
+            // .select('users.*', 'itinerary.*')
+            .select('*')
             .then(data => {
                 return res.send(data)
             })
+
 
     } catch (error) {
         res.send(error)
     }
 }
+
 
 
