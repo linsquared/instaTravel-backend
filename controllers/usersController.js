@@ -22,7 +22,7 @@ exports.getUsers = (_req, res) => {
         .catch((err) => res.status(400).send(`Error retrieving user info ${err}`));
 }
 
-// get a single user by search resutl
+// get a single user by username search
 exports.getByUser = (req, res) => {
     knex('users')
         .select(
@@ -52,6 +52,7 @@ exports.getByUser = (req, res) => {
         })
 }
 
+// register
 exports.register = (req, res) => {
     const encryptPw = bcrypt.hashSync(req.body.password)
     const newUser = {
@@ -59,7 +60,6 @@ exports.register = (req, res) => {
         ...req.body,
         password: encryptPw
     }
-
     knex('users')
         .insert(newUser)
         .then(data => {
@@ -68,16 +68,17 @@ exports.register = (req, res) => {
         .catch((err) => res.status(400).send(`Error with your signup ${err}`));
 }
 
+// login
 exports.login = (req, res) => {
     const { username, password } = req.body;
     knex('users')
         .where({ user_name: username })
         .then(data => {
             if (!data.length) {
-                res.send('this username was not found')
+                res.status(404).send('This username was not found');
             }
             const pwCorrect = bcrypt.compareSync(password, data[0].password)
-            if (!pwCorrect) return res.send('wrong password')
+            if (!pwCorrect) return res.status(401).send('Wrong password')
 
             const token = jwt.sign(
                 { id: data[0].id, username: data[0].user_name },
@@ -90,26 +91,71 @@ exports.login = (req, res) => {
         .catch(err => console.log(err))
 }
 
-exports.profile = (req, res) => {
-    // // If there is no auth header provided
-    if (!req.headers.authorization) return res.send("PLEASE LOGIN!")
+// come back to this to send the right info 
+// exports.profile = (req, res) => {
+//     // If there is no auth header provided
+//     if (!req.headers.authorization) return res.send("PLEASE LOGIN!");
 
-    // // Parse the bearer token
+//     // Parse the bearer token
+//     const authHeader = req.headers.authorization;
+//     const authToken = authHeader.split(" ")[1]; // Bearer JWT
+
+//     try {
+//         const decoded = jwt.verify(authToken, process.env.JWT_KEY);
+//         const username = decoded.username;
+
+//         // Fetch user data from users table
+//         knex('users')
+//             .where('user_name', username)
+//             .select('*')
+//             .then(userData => {
+//                 const user = userData[0];
+
+//                 // Fetch itinerary data from itinerary table
+//                 knex('itinerary')
+//                     .where('user_name', username)
+//                     .select('*')
+//                     .then(itineraryData => {
+//                         const itinerary = itineraryData[0];
+
+//                         return res.send({ user, itinerary });
+//                     })
+//             })
+
+//     } catch (error) {
+//         res.send(error)
+//     }
+// }
+
+
+
+exports.profile = (req, res) => {
+    // If there is no auth header provided
+    if (!req.headers.authorization) return res.send("PLEASE LOGIN!");
+
+    // Parse the bearer token
     const authHeader = req.headers.authorization;
-    const authToken = authHeader.split(" ")[1] // :`Bearer JWT`
+    const authToken = authHeader.split(" ")[1]; // Bearer JWT
 
     try {
         const decoded = jwt.verify(authToken, process.env.JWT_KEY);
-        if (decoded) return res.send(decoded);
+        const username = decoded.username;
+
+        // Fetch data from users and itinerary tables
         knex('users')
-            .where({ id: decoded.id })
-            .then(res => {
-                console.log(res)
+            // .leftJoin('itinerary', 'users.user_name', 'itinerary.user_name')
+            .where('users.user_name', username)
+            // .select('users.*', 'itinerary.*')
+            .select('*')
+            .then(data => {
+                return res.send(data)
             })
+
+
     } catch (error) {
         res.send(error)
     }
-    // Verify the token
-    if (req.decoded) res.json(req.decoded);
-
 }
+
+
+
