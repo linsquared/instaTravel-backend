@@ -13,5 +13,7 @@ router.get('/:city', itinerariesController.getByCity)
 // getting an itinerary based on the id
 router.get('/id/:itineraryId', itinerariesController.getByItId)
 
+// posting an itinerary
+router.post("/", itinerariesController.post);
 
 module.exports = router;

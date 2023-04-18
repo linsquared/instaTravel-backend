@@ -71,14 +71,20 @@ exports.register = (req, res) => {
 // login
 exports.login = (req, res) => {
     const { username, password } = req.body;
+    console.log("pass", password);
     knex('users')
         .where({ user_name: username })
         .then(data => {
             if (!data.length) {
-                res.status(404).send('This username was not found');
+                return res.status(404).send('This username was not found');
             }
             const pwCorrect = bcrypt.compareSync(password, data[0].password)
-            if (!pwCorrect) return res.status(401).send('Wrong password')
+
+
+            if (!pwCorrect) {
+
+                return res.status(401).send('Wrong password')
+            }
 
             const token = jwt.sign(
                 { id: data[0].id, username: data[0].user_name },

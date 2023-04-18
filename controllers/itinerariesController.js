@@ -1,4 +1,5 @@
 const knex = require("knex")(require("../knexfile"));
+const { randomUUID } = require("crypto");
 
 exports.getAll = (_req, res) => {
     knex('itinerary')
@@ -110,4 +111,23 @@ exports.getByItId = (req, res) => {
             res.status(404).send(`Error finding day data for itinerary ${req.params.itineraryId} ${err}`)
         })
 }
+
+exports.post = (req, res) => {
+    //check for warehouse id exists in warehouse table
+    knex("users")
+        .select("user_id")
+        .then((data) => {
+            const dataArr = data.map((item) => item.user_id);
+            //check for if warehouse id is valid
+            if (!dataArr.includes(req.body.user_id)) {
+                return res.status(400).send("This user does not exist");
+            }
+
+            const newItinerary = { itinerary_id: randomUUID(), ...req.body };
+            knex("itinerary")
+                .insert(newItinerary)
+                .then(() => res.status(201).json(newItinerary.itinerary_id));
+        })
+        .catch((err) => res.status(400).send(`Error creating Itinerary: ${err}`));
+};
 
