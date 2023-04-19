@@ -16,4 +16,10 @@ router.get('/id/:itineraryId', itinerariesController.getByItId)
 // posting an itinerary
 router.post("/", itinerariesController.post);
 
+// posting activity/activities
+router.post('/activity', itinerariesController.postAct)
+
+// posting a day
+router.post('/activity/day', itinerariesController.postDay)
+
 module.exports = router;

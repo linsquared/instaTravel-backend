@@ -131,3 +131,29 @@ exports.post = (req, res) => {
         .catch((err) => res.status(400).send(`Error creating Itinerary: ${err}`));
 };
 
+exports.postAct = (req, res) => {
+    // console.log(req.body)
+    const newActivities = req.body.map(activity => ({
+        activity_id: randomUUID(), ...activity
+    }))
+
+    Promise.all(
+        newActivities.map(activity => knex("activities").insert(activity))
+    )
+        .then(() => res.status(200).json(newActivities))
+        .catch(err => res.status(400).send(`Error creating activities: ${err}`));
+}
+
+exports.postDay = (req, res) => {
+    console.log(req.body)
+    const newDay = req.body.map(day => ({
+        day_id: randomUUID(), ...day
+    }))
+
+    Promise.all(
+        newDay.map(day => knex('day').insert(day))
+    )
+        .catch(() => res.status(200).send('successully added day table'))
+        .catch(err => res.status(400).send(`Error creating day table ${err}`));
+
+}
