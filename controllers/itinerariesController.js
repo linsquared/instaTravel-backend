@@ -112,6 +112,7 @@ exports.getByItId = (req, res) => {
         })
 }
 
+// posting a new itinerary
 exports.post = (req, res) => {
     //check for warehouse id exists in warehouse table
     knex("users")
@@ -153,7 +154,7 @@ exports.postDay = (req, res) => {
     Promise.all(
         newDay.map(day => knex('day').insert(day))
     )
-        .catch(() => res.status(200).send('successully added day table'))
+        .then(() => res.status(200).send('successully added day table'))
         .catch(err => res.status(400).send(`Error creating day table ${err}`));
 
 }
