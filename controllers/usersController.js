@@ -128,18 +128,22 @@ exports.profile = (req, res) => {
 
 // update user icon image
 exports.put = (req, res) => {
+    const user_id = req.params.userId;
+    const body = req.body
+    const user_icon = Object.keys(body)[0]
 
     knex('users')
-        .where({ user_id: req.params.userId })
-        .update(req.body.user_icon)
+        .where('user_id', user_id)
+        .update({ user_icon })
         .then((data => {
             if (data == 0) {
                 return res
                     .status(404)
-                    .send(`user with id ${req.params.userId} is not found`);
+                    .send(`user with id ${user_id} is not found`);
             }
             knex('users')
-                .where({ user_id: req.params.userId })
+                .where('user_id', user_id)
+                .select('user_id', 'user_icon')
                 .then(data => {
                     res.status(200).json(data[0])
                 });

@@ -22,6 +22,6 @@ router.post('/login', usersController.login)
 router.get('/current/profile', authorize, usersController.profile)
 
 // user put to add user icon
-router.put('/', usersController.put)
+router.put('/:userId', usersController.put)
 
 module.exports = router;
