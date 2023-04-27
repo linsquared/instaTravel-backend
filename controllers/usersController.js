@@ -97,44 +97,7 @@ exports.login = (req, res) => {
         .catch(err => console.log(err))
 }
 
-// come back to this to send the right info 
-// exports.profile = (req, res) => {
-//     // If there is no auth header provided
-//     if (!req.headers.authorization) return res.send("PLEASE LOGIN!");
-
-//     // Parse the bearer token
-//     const authHeader = req.headers.authorization;
-//     const authToken = authHeader.split(" ")[1]; // Bearer JWT
-
-//     try {
-//         const decoded = jwt.verify(authToken, process.env.JWT_KEY);
-//         const username = decoded.username;
-
-//         // Fetch user data from users table
-//         knex('users')
-//             .where('user_name', username)
-//             .select('*')
-//             .then(userData => {
-//                 const user = userData[0];
-
-//                 // Fetch itinerary data from itinerary table
-//                 knex('itinerary')
-//                     .where('user_name', username)
-//                     .select('*')
-//                     .then(itineraryData => {
-//                         const itinerary = itineraryData[0];
-
-//                         return res.send({ user, itinerary });
-//                     })
-//             })
-
-//     } catch (error) {
-//         res.send(error)
-//     }
-// }
-
-
-
+// getting user profile
 exports.profile = (req, res) => {
     // If there is no auth header provided
     if (!req.headers.authorization) return res.send("PLEASE LOGIN!");
@@ -163,5 +126,25 @@ exports.profile = (req, res) => {
     }
 }
 
+// update user icon image
+exports.put = (req, res) => {
 
-
+    knex('users')
+        .where({ user_id: req.params.userId })
+        .update(req.body.user_icon)
+        .then((data => {
+            if (data == 0) {
+                return res
+                    .status(404)
+                    .send(`user with id ${req.params.userId} is not found`);
+            }
+            knex('users')
+                .where({ user_id: req.params.userId })
+                .then(data => {
+                    res.status(200).json(data[0])
+                });
+        }))
+        .catch(err => {
+            res.status(400).send(`Error updating user ${req.params.user_id} profile image `)
+        })
+}
