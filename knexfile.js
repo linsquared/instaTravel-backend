@@ -7,7 +7,7 @@ module.exports = {
     user: "root",
     // CHECK ENV EXAMPLE
     password: process.env.DB_LOCAL_PASSWORD,
-    database: "insta_travel ",
+    database: "insta_travel",
     charset: "utf8",
   },
 };
