@@ -4,7 +4,7 @@ const usersValidation = (req, res, next) => {
         !req.body.user_name ||
         !req.body.author ||
         !req.body.password ||
-        !req.body.email
+        !req.body.emailw
     ) {
         return res
             .status(400)
